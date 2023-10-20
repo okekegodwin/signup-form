@@ -1,0 +1,157 @@
+*, 
+::before, 
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: logo-font;
+  src: url(./Norse-Bold.otf);
+}
+
+:root {
+  --white: white;
+  --button: #596D48;
+  --input-border-color: #E5E7EB;
+  --bg-color: rgba(0, 0, 0, 0.7);
+  --signup-bg-color: #F9FAFB;
+
+  --maxmin-width: max(100%, 200px);
+}
+
+html { font-size: 62.5%; }
+body { font-family: 'Roboto', sans-serif; }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-sidebar {
+  position: relative;
+  width: 35%;
+}
+
+.image-sidebar .side-image {
+  width: var(--maxmin-width);
+  height: 100vh;
+  object-fit: cover;
+}
+
+.image-sidebar .logo-container {
+  position: absolute;
+  top: 23%;
+  width: var(--maxmin-width);
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  z-index: 1;
+}
+
+.logo-container img { width: 70px; }
+.logo-container p {
+  font-family: logo-font;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+footer p {
+  text-align: center;
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+footer p a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.signup-section {
+  background-color: var(--signup-bg-color);
+  width: 65%;
+  padding-top: 5rem;
+  color: #26303D;
+  padding-bottom: 8rem;
+}
+
+.signup-section .text {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.text h2 {
+  font-size: 4rem;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+}
+
+.text p { font-size: 2.2rem; }
+
+.form { 
+  background-color: var(--white); 
+  padding: 1.5rem 5rem;
+}
+
+.form h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+form fieldset {
+  border: none;
+  row-gap: 3rem;
+  column-gap: 20rem;
+  margin-bottom: 1.5rem;
+}
+
+fieldset label {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+fieldset input {
+  width: 150%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--input-border-color);
+}
+
+fieldset input:focus {
+  outline: none;
+  border: 1px solid blue;
+  box-shadow: 1px 1px 5px black;
+}
+
+form button {
+  font-size: 2rem;
+  padding: 1rem 3rem;
+  margin: 3rem 5rem;
+  border-radius: 0.5rem;
+  background-color: var(--button);
+  border: none;
+  color: var(--white);
+}
+
+.signup-section .login {
+  margin-left: 5rem;
+  font-size: 1.5rem;
+}
+
+.signup-section .login a {
+  text-decoration: none;
+  color: #26303D;
+}
